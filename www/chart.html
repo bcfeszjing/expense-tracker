@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-top">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Add Expense</span>
+          <div class="grey-stripe"></div>
+        </div>
+    </nav>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="navbar fixed-bottom navbar-light">
+        <div class="container-fluid">
+        <div class="d-flex justify-content-center w-100">
+            <div class="nav-item">
+            <a class="nav-link" href="home.html">
+                <i class="bi bi-house"></i>
+                <span>Home</span>
+            </a>
+            </div>
+
+            <div class="nav-item">
+            <a class="nav-link" href="item.html">
+                <i class="bi bi-plus-circle"></i>
+                <span>Item</span>
+            </a>
+            </div>
+
+            <div class="nav-item">
+            <a class="nav-link" href="#chart">
+                <i class="bi bi-bar-chart"></i>
+                <span>Chart</span>
+            </a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-container">
+        <div class="form-group">
+            <select class="form-control stylish-select" id="monthSelect">
+                <option selected disabled>Select Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        </div>
+        <div id="infoBar" class="alert alert-primary" role="alert">
+            <div id="monthDisplay">Total Expense for May:</div>
+            <div id="expenseDisplay">RM 0</div>
+        </div>
+        <canvas id="expenseChart"></canvas>
+        <h3 class="mt-4 mb-4">Category</h3>
+        <div class="category-box p-4">
+            <div class="row">
+                <div class="col-6 category-column" data-category="food">
+                    <div class="squircle bg-light-blue">
+                        <img src="Image/food.png" class="category-icon">
+                        <h5 class="category-name">Food</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+                <div class="col-6 category-column" data-category="bills">
+                    <div class="squircle bg-light-green">
+                        <img src="Image/bill.png" class="category-icon">
+                        <h5 class="category-name">Bills</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+                <div class="col-6 category-column" data-category="transportation">
+                    <div class="squircle bg-light-yellow">
+                        <img src="Image/finance.png" class="category-icon">
+                        <h5 class="category-name">Transportation</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+                <div class="col-6 category-column" data-category="groceries">
+                    <div class="squircle bg-light-pink">
+                        <img src="Image/food.png" class="category-icon">
+                        <h5 class="category-name">Groceries</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+                <div class="col-6 category-column" data-category="entertainment">
+                    <div class="squircle bg-light-purple">
+                        <img src="Image/clapperboard.png" class="category-icon">
+                        <h5 class="category-name">Entertainment</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+                <div class="col-6 category-column" data-category="others">
+                    <div class="squircle bg-light-orange">
+                        <img src="Image/more-information.png" class="category-icon">
+                        <h5 class="category-name">Others</h5>
+                        <p class="category-amount">RM XXX.XX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="summary.js"></script>
+</body>
+</html>
+
+
