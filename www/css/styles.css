@@ -1,0 +1,61 @@
+body {
+  margin-bottom: 60px; /* Ensure there's space for the fixed navbar */
+}
+.container {
+  width: 90%;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+}
+
+/* Bottom Navigation Bar */
+.navbar {
+  background-color: #4A90E2;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+.nav-item {
+  flex-grow: 1;
+  text-align: center;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0;
+  color: white;
+  font-weight: bold;
+}
+.nav-link i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.nav-link span {
+  font-size: 0.9rem;
+}
+.nav-link.active {
+  color: #FFD700;
+}
+
+/* Top Navigation Bar */
+.navbar-top {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0; /* Ensure it's at the top */
+}
+.navbar-brand {
+  color: #000000;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+}
+.grey-stripe {
+  height: 3px; /* Set height for the grey stripe */
+  background-color: #CCCCCC; /* Grey color */
+  width: 100%; /* Full width */
+}
