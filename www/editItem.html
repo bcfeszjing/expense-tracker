@@ -19,6 +19,34 @@
     </div>
   </nav>
 
+  <!-- Bottom Navigation Bar -->
+  <nav class="navbar fixed-bottom navbar-light">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-center w-100">
+        <div class="nav-item">
+          <a class="nav-link" href="home.html">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+          </a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="item.html">
+            <i class="bi bi-plus-circle"></i>
+            <span>Item</span>
+          </a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#chart">
+            <i class="bi bi-bar-chart"></i>
+            <span>Chart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- Expense Details Container -->
   <div class="container expense-details-box">
     <div class="row justify-content-center">
@@ -53,9 +81,11 @@
           <label for="description" class="form-label">Description</label>
           <textarea class="form-control" id="description" rows="3"></textarea>
         </div>
-        <div class="text-center">
+        <div class="text-center mt-4">
           <button type="button" class="btn btn-primary" id="save-button"><i class="bi bi-save"></i> Save</button>
           <button type="button" class="btn btn-danger" id="delete-button"><i class="bi bi-trash"></i> Delete</button>
+        </div>
+        <div class="mb-5 pb-3">
         </div>
       </div>
     </div>
