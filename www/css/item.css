@@ -34,4 +34,17 @@
 /* Item List */
 .expense-list-box {
     padding-bottom: 80px; /* Adjust this value as needed */
-  }
+}
+
+.detail-link {
+  font-weight: bold;
+  color: black;
+}
+.detail-link i {
+  font-size: 1.5rem;
+}
+
+/* Align amounts properly */
+.list-group-item .ms-auto {
+  margin-left: auto;
+}

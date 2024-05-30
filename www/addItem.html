@@ -69,7 +69,12 @@
           </div>
           <div class="mb-3">
             <label for="amount" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="amount" required>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">RM</span>
+              </div>
+              <input type="number" class="form-control" id="amount" required>
+            </div>
           </div>
           <div class="mb-3">
             <label for="date" class="form-label">Date</label>
@@ -83,7 +88,6 @@
             <button type="submit" class="btn btn-primary add-item-circle"><i class="bi bi-check-circle"></i></button>
           </div>
           <div class="mb-5">
-
           </div>
         </form>
       </div>
