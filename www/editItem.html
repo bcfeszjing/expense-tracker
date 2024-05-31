@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expense Details</title>
+  <title>Edit Expense</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -14,50 +14,23 @@
   <!-- Top Navigation Bar -->
   <nav class="navbar navbar-top">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Expense Details</span>
+      <span class="navbar-brand mb-0 h1">Edit Expense</span>
       <div class="grey-stripe"></div>
     </div>
   </nav>
 
-  <!-- Bottom Navigation Bar -->
-  <nav class="navbar fixed-bottom navbar-light">
-    <div class="container-fluid">
-      <div class="d-flex justify-content-center w-100">
-        <div class="nav-item">
-          <a class="nav-link" href="home.html">
-            <i class="bi bi-house"></i>
-            <span>Home</span>
-          </a>
-        </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="item.html">
-            <i class="bi bi-plus-circle"></i>
-            <span>Item</span>
-          </a>
-        </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="#chart">
-            <i class="bi bi-bar-chart"></i>
-            <span>Chart</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Expense Details Container -->
-  <div class="container expense-details-box">
+  <!-- Edit Expense Form -->
+  <div class="container edit-expense-box">
     <div class="row justify-content-center">
       <div class="col-8">
-        <div class="mb-3">
-          <label for="expense-name" class="form-label">Expense Name</label>
-          <input type="text" class="form-control" id="expense-name">
-        </div>
-        <div class="mb-3">
+        <form id="edit-expense-form">
+          <div class="mb-3">
+            <label for="expense-name" class="form-label">Expense Name</label>
+            <input type="text" class="form-control" id="expense-name" required>
+          </div>
+          <div class="mb-3">
             <label for="category" class="form-label">Category</label>
-            <select class="form-select" id="category">
+            <select class="form-select" id="category" required>
               <option value="Food">Food</option>
               <option value="Bills">Bills</option>
               <option value="Transportation">Transportation</option>
@@ -65,33 +38,33 @@
               <option value="Entertainment">Entertainment</option>
               <option value="Others">Others</option>
             </select>
-        </div>
-        <div class="mb-3">
+          </div>
+          <div class="mb-3">
             <label for="amount" class="form-label">Amount</label>
             <div class="input-group">
-              <span class="input-group-text">RM</span>
-              <input type="text" class="form-control" id="amount">
+              <div class="input-group-prepend">
+                <span class="input-group-text">RM</span>
+              </div>
+              <input type="number" class="form-control" id="amount" required>
             </div>
           </div>
-        <div class="mb-3">
-          <label for="date" class="form-label">Date</label>
-          <input type="text" class="form-control" id="date">
-        </div>
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea class="form-control" id="description" rows="3"></textarea>
-        </div>
-        <div class="text-center mt-4">
-          <button type="button" class="btn btn-primary" id="save-button"><i class="bi bi-save"></i> Save</button>
-          <button type="button" class="btn btn-danger" id="delete-button"><i class="bi bi-trash"></i> Delete</button>
-        </div>
-        <div class="mb-5 pb-3">
-        </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" id="save-button"><i class="bi bi-save"></i> Save</button>
+            <button type="button" class="btn btn-danger" id="delete-button"><i class="bi bi-trash"></i> Delete</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <script src="js/editItem.js"></script>
-
 </body>
 </html>
