@@ -6,7 +6,7 @@ body {
 /* Top Navigation Bar */
 .navbar-top {
   background-color: white; /* Set background to clear */
-  position: absolute; /* Fixed positioning to stay on top */
+  position: fixed; /* Fixed positioning to stay on top */
   width: 100%; /* Full width */
   z-index: 1000; /* Ensure it's on top of other elements */
   top: 0;
@@ -41,8 +41,8 @@ body {
 }
 
 .content {
-  margin-top: 60px; /* Add margin to avoid overlap with top navbar */
-  margin-bottom: 20px;
+  margin-top: 70px; /* Add margin to avoid overlap with top navbar */
+  margin-bottom: 70px; /* Add margin to avoid overlap with bottom navbar */
 }
 
 /* Total Expense Box Styling */

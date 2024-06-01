@@ -12,7 +12,7 @@ body {
 
 /* Top Navigation Bar */
 header {
-    position: absolute;
+    position: fixed; /* Fixed positioning to stay on top */
     top: 0;
     left: 0;
     width: 100%;
@@ -34,7 +34,7 @@ hr {
 
 /* Bottom Navigation Bar */
 footer {
-    position: fixed;
+    position: fixed; /* Fixed positioning to stay at the bottom */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -67,4 +67,3 @@ footer {
 .footer-icon {
     font-size: 1.5rem; /* Adjust the size as needed */
 }
-
