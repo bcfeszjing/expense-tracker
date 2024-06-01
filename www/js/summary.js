@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Expenses',
             data: getInitialChartData()
         }],
+        colors: ['#add8e6', '#90ee90', '#ffffe0', '#ffb6c1', '#dda0dd', '#ffcc99'], // Colors for the categories
         responsive: {
             rules: [{
                 condition: {
