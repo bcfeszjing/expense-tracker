@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/expenseInterface.css">
+</head>
+<body>
+    <div class="container my-container">
+        <h3 id="categoryTitle" class="mt-4 mb-4">
+            <i id="backArrow" class="bi bi-arrow-left"></i>
+            <span id="categoryTopic"></span>
+        </h3>
+        <div id="expensesList"></div>
+    </div>
+    <div id="popupContainer" class="popup-container" style="display: none;">
+        <div class="popup-content">
+            <h3 id="expenseDetailTitle" class="mt-4 mb-4">
+                <i id="closePopup" class="bi bi-x-circle"></i>
+                <span id="expenseName"></span>
+            </h3>
+            <div id="expenseDetail"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+    <script src="js/expenseInterface.js"></script>
+</body>
+</html>

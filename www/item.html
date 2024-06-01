@@ -12,12 +12,14 @@
 <body>
 
   <!-- Top Navigation Bar -->
-  <nav class="navbar navbar-top">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Expense</span>
-      <div class="grey-stripe"></div>
+  <header>
+    <div class="container">
+        <div class="header-content">
+            <h1 class="mx-auto">Expense</h1>
+        </div>
     </div>
-  </nav>
+  </header>
+  <hr>
   
   <!-- Add Expense Box -->
   <div class="container item-box">
@@ -36,34 +38,24 @@
   </div>
 
   <!-- Bottom Navigation Bar -->
-  <nav class="navbar fixed-bottom navbar-light">
+  <footer>
     <div class="container-fluid">
-      <div class="d-flex justify-content-center w-100">
-        <div class="nav-item">
-          <a class="nav-link" href="home.html">
-            <i class="bi bi-house"></i>
-            <span>Home</span>
-          </a>
+        <div class="footer-content d-flex justify-content-around">
+            <a href="#" class="text-decoration-none d-flex flex-column align-items-center active" id="homeFooter">
+                <i class="bi bi-house-door-fill footer-icon"></i>
+            </a>
+            <a href="#" class="text-decoration-none d-flex flex-column align-items-center" id="expensesFooter">
+                <i class="bi bi-plus-circle footer-icon large-icon"></i>
+            </a>
+            <a href="#" class="text-decoration-none d-flex flex-column align-items-center" id="statisticFooter">
+                <i class="bi bi-graph-up footer-icon"></i>
+            </a>
         </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="item.html">
-            <i class="bi bi-plus-circle"></i>
-            <span>Item</span>
-          </a>
-        </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="#chart">
-            <i class="bi bi-bar-chart"></i>
-            <span>Chart</span>
-          </a>
-        </div>
-      </div>
     </div>
-  </nav>
+  </footer>
 
   <script src="js/item.js"></script>
+  <script src="js/test.js"></script>
 
 </body>
 </html>

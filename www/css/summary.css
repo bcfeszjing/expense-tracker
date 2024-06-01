@@ -1,3 +1,28 @@
+body {
+    margin: 0;
+    padding-top: 70px; /* Adjusted for the fixed header */
+    padding-bottom: 70px; /* Adjusted for the fixed footer */
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Adjusted height for the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-content {
+    width: 100%;
+    text-align: center; /* Ensures the text is centered */
+}
+hr {
+    margin-top: 0; /* Ensures hr does not add extra margin */
+}
 .container.my-container {
     margin-top: 20px;
     width: 100%;
@@ -90,3 +115,49 @@ h3 {
         font-size: 0.8em;
     }
 }
+
+body {
+    margin: 0;
+    padding-bottom: 70px; /* Adjusted for the fixed footer */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; /* Ensures items are evenly spaced */
+}
+
+.footer-content a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.footer-content a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.footer-icon {
+    font-size: 1.5rem; /* Adjust the size as needed */
+}
+
+

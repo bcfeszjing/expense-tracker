@@ -7,44 +7,70 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
   <!-- Top Navigation Bar -->
   <nav class="navbar navbar-top">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h3">Welcome back,</span>
-      <span class="navbar-name mb-0 h2">OMOMOMOMO</span>
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div>
+        <span class="navbar-brand mb-0 h3">Welcome back,</span>
+        <span class="navbar-name mb-0 h2" id="username-display"></span>
+      </div>
+      <button class="btn btn-outline-danger" id="logout-btn">Logout</button>
+      <div class="grey-stripe"></div>
     </div>
   </nav>
 
-  <!-- Bottom Navigation Bar -->
-  <nav class="navbar fixed-bottom navbar-light">
-    <div class="container-fluid">
-      <div class="d-flex justify-content-center w-100">
-        <div class="nav-item">
-          <a class="nav-link" href="home.html">
-            <i class="bi bi-house"></i>
-            <span>Home</span>
-          </a>
-        </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="item.html">
-            <i class="bi bi-plus-circle"></i>
-            <span>Item</span>
-          </a>
-        </div>
-
-        <div class="nav-item">
-          <a class="nav-link" href="#chart">
-            <i class="bi bi-bar-chart"></i>
-            <span>Chart</span>
-          </a>
+  <!-- Content Wrapper with Margin -->
+  <div class="content">
+    <!-- Total Expense Box -->
+    <div class="container my-4">
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-8">
+          <div class="total-expense-box text-center p-4 rounded shadow">
+            <h5 class="box-title">Total Expense for <span id="latest-month">this month</span></h5>
+            <p class="box-amount" id="total-expense">RM0.00</p>
+          </div>
         </div>
       </div>
     </div>
-  </nav>
+
+    <!-- Recent Expenses List -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-8">
+          <h4>Recent Expenses</h4>
+          <div class="list-group" id="recent-expenses">
+            <!-- Recent expense items will be added here dynamically -->
+          </div>
+          <div class="text-center my-3">
+            <a href="summary.html" class="btn btn-primary">View All</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <footer>
+    <div class="container-fluid">
+        <div class="footer-content d-flex justify-content-around">
+            <a href="home.html" class="text-decoration-none d-flex flex-column align-items-center active" id="homeFooter">
+                <i class="bi bi-house-door-fill footer-icon"></i>
+            </a>
+            <a href="#" class="text-decoration-none d-flex flex-column align-items-center" id="expensesFooter">
+                <i class="bi bi-plus-circle footer-icon large-icon"></i>
+            </a>
+            <a href="#" class="text-decoration-none d-flex flex-column align-items-center" id="statisticFooter">
+                <i class="bi bi-graph-up footer-icon"></i>
+            </a>
+        </div>
+    </div>
+  </footer>
+
+  <script src="js/test.js"></script>
+  <script src="js/home.js"></script>
 
 </body>
 </html>

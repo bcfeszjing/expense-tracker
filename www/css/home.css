@@ -1,63 +1,90 @@
 body {
-    margin-bottom: 60px; /* Ensure there's space for the fixed navbar */
-  }
-  .navbar {
-    background-color: #4A90E2;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-  }
-  .nav-item {
-    flex-grow: 1;
-    text-align: center;
-  }
-  .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 0;
-    color: white;
-    font-weight: bold;
-  }
-  .nav-link i {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  .nav-link span {
-    font-size: 0.9rem;
-  }
-  .nav-link.active {
-    color: #FFD700;
-  }
-  
+  margin-bottom: 60px; /* Ensure there's space for the fixed navbar */
+  overflow-x: hidden;
+}
+
 /* Top Navigation Bar */
 .navbar-top {
-    background-color: transparent; /* Set background to clear */
-    position: fixed; /* Fixed positioning to stay on top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it's on top of other elements */
-  }
-  .navbar-brand {
-    color: #000000; /* Text color */
-    font-size: 1.5rem; /* Font size */
-    font-weight: bold;
-    text-align: left; /* Center align text */
-    width: 100%; /* Full width */
-    display: block; /* Make it a block element */
-    padding-top: 20px; /* Add padding */
-    padding-left: 10px;
-  }
-  .navbar-name {
-    color: #000000; /* Text color */
-    font-size: 1.8rem; /* Font size */
-    font-weight: bold;
-    text-align: left; /* Center align text */
-    width: 100%; /* Full width */
-    display: block; /* Make it a block element */
-    padding-left: 10px;
-  }
-  .grey-stripe {
-    height: 3px; /* Set height for the grey stripe */
-    background-color: #CCCCCC; /* Grey color */
-    width: 100%; /* Full width */
-  }
-  
+  background-color: white; /* Set background to clear */
+  position: absolute; /* Fixed positioning to stay on top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  top: 0;
+}
+
+.navbar-brand {
+  color: #000000; /* Text color */
+  font-size: 1.5rem; /* Font size */
+  font-weight: bold;
+  text-align: left; /* Center align text */
+  width: 100%; /* Full width */
+  display: block; /* Make it a block element */
+  padding-top: 20px; /* Add padding */
+  padding-left: 10px;
+}
+
+.navbar-name {
+  color: #000000; /* Text color */
+  font-size: 1.8rem; /* Font size */
+  font-weight: bold;
+  text-align: left; /* Center align text */
+  width: 100%; /* Full width */
+  display: block; /* Make it a block element */
+  padding-left: 10px;
+}
+
+.grey-stripe {
+  margin-top: 10px;
+  height: 3px; /* Set height for the grey stripe */
+  background-color: #CCCCCC; /* Grey color */
+  width: 100%; /* Full width */
+}
+
+.content {
+  margin-top: 60px; /* Add margin to avoid overlap with top navbar */
+  margin-bottom: 20px;
+}
+
+/* Total Expense Box Styling */
+.total-expense-box {
+  background: linear-gradient(to right, #0080ff, #0000ff); /* Blue to dark blue gradient */
+  border: 2px solid #4A90E2; /* Blue border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.box-title {
+  font-size: 1.2rem; /* Slightly larger font */
+  font-weight: bold; /* Bold text */
+  color: #fff; /* White color */
+}
+
+.box-amount {
+  font-size: 2rem; /* Larger font for the amount */
+  font-weight: bold; /* Bold text */
+  color: #fff; /* White color */
+  margin-top: 10px; /* Margin above the amount */
+}
+
+/* Decorative Element */
+.total-expense-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #1A5276; /* Dark blue color */
+  border-radius: 50%;
+}
+
+.total-expense-box::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #1A5276; /* Dark blue color */
+  border-radius: 50%;
+}

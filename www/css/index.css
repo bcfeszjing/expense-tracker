@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #343a40;
+  font-size: 2.5rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.quote {
+  color: #6c757d;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: sans-serif;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.btn-lg {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.3s;
+  max-width: 200px; /* Set maximum width for buttons */
+  width: 100%; /* Make buttons take full width up to max-width */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #565e64;
+  border-color: #565e64;
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
