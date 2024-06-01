@@ -1,12 +1,19 @@
 body {
-  margin-bottom: 60px; /* Ensure there's space for the fixed navbar */
-  overflow-x: hidden;
+  margin: 0;
+  padding-top: 70px; /* Adjusted for the fixed header */
+  padding-bottom: 70px; /* Adjusted for the fixed footer */
+}
+.container {
+width: 90%;
+display: block;
+margin: auto;
+padding-top: 10px;
 }
 
 /* Top Navigation Bar */
 .navbar-top {
   background-color: white; /* Set background to clear */
-  position: fixed; /* Fixed positioning to stay on top */
+  position: absolute; /* Fixed positioning to stay on top */
   width: 100%; /* Full width */
   z-index: 1000; /* Ensure it's on top of other elements */
   top: 0;
@@ -41,8 +48,8 @@ body {
 }
 
 .content {
-  margin-top: 70px; /* Add margin to avoid overlap with top navbar */
-  margin-bottom: 70px; /* Add margin to avoid overlap with bottom navbar */
+  margin-top: 60px; /* Add margin to avoid overlap with top navbar */
+  margin-bottom: 20px;
 }
 
 /* Total Expense Box Styling */
@@ -87,4 +94,40 @@ body {
   height: 20px;
   background-color: #1A5276; /* Dark blue color */
   border-radius: 50%;
+}
+
+/* Bottom Navigation Bar */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around; /* Ensures items are evenly spaced */
+}
+.footer-content a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.footer-content a.active {
+  background-color: #007bff;
+  color: white;
+}
+.footer-icon {
+  font-size: 1.5rem; /* Adjust the size as needed */
 }
