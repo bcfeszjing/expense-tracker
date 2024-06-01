@@ -1,0 +1,36 @@
+.my-container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+}
+
+#categoryTitle {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust font size for better visibility */
+}
+
+#categoryTitle i {
+    float: left;
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+#categoryTitle span {
+    margin-left: auto;
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #categoryTitle {
+        font-size: 1.2rem;
+    }
+
+    #categoryTitle i {
+        font-size: 1.2rem;
+    }
+
+    #categoryTitle span {
+        font-size: 1.2rem;
+    }
+}

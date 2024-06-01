@@ -1,0 +1,163 @@
+.my-container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+}
+
+#categoryTitle {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#categoryTitle i {
+    float: left;
+    font-size: 1.5rem;
+}
+
+#categoryTitle span {
+    margin-left: auto;
+    font-size: 1.5rem;
+}
+
+#expensesList {
+    margin-top: 20px;
+}
+
+.expense-date {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.expense-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.popup-content p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.popup-content p strong {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.popup-content p span {
+    display: inline-block;
+    flex: 1;
+}
+
+#expenseDetailTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+#closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#expenseDetail {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.popup-description {
+    max-height: 150px;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #categoryTitle {
+        font-size: 1.2rem;
+    }
+
+    #categoryTitle i {
+        font-size: 1.2rem;
+    }
+
+    #categoryTitle span {
+        font-size: 1.2rem;
+    }
+
+    .expense-date {
+        font-size: 1rem;
+    }
+
+    .expense-item {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .expense-item div {
+        font-size: 1rem;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+    #expenseDetailTitle {
+        font-size: 1.2rem;
+    }
+
+    #closePopup {
+        font-size: 1.2rem;
+    }
+
+    #expenseDetail {
+        font-size: 1rem;
+    }
+}

@@ -1,5 +1,7 @@
 body {
-  margin-bottom: 60px; /* Ensure there's space for the fixed navbar */
+    margin: 0;
+    padding-top: 70px; /* Adjusted for the fixed header */
+    padding-bottom: 70px; /* Adjusted for the fixed footer */
 }
 .container {
   width: 90%;
@@ -8,55 +10,61 @@ body {
   padding-top: 10px;
 }
 
-/* Bottom Navigation Bar */
-.navbar {
-  background-color: #4A90E2;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+/* Top Navigation Bar */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px; /* Adjusted height for the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.nav-item {
-  flex-grow: 1;
-  text-align: center;
+.header-content {
+    width: 100%;
+    text-align: center; /* Ensures the text is centered */
 }
-.nav-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px 0;
-  color: white;
-  font-weight: bold;
-}
-.nav-link i {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-.nav-link span {
-  font-size: 0.9rem;
-}
-.nav-link.active {
-  color: #FFD700;
+hr {
+    margin-top: 0; /* Ensures hr does not add extra margin */
 }
 
-/* Top Navigation Bar */
-.navbar-top {
-  background-color: white;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  top: 0; /* Ensure it's at the top */
+/* Bottom Navigation Bar */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    display: flex;
+    align-items: center;
 }
-.navbar-brand {
-  color: #000000;
-  font-size: 1.7rem;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  display: block;
-  padding: 20px 0;
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; /* Ensures items are evenly spaced */
 }
-.grey-stripe {
-  height: 3px; /* Set height for the grey stripe */
-  background-color: #CCCCCC; /* Grey color */
-  width: 100%; /* Full width */
+.footer-content a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.footer-content a.active {
+    background-color: #007bff;
+    color: white;
+}
+.footer-icon {
+    font-size: 1.5rem; /* Adjust the size as needed */
 }
 
