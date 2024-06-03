@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const backArrow = document.getElementById('backArrow');
     backArrow.addEventListener('click', function() {
-        window.location.href = 'summary.html';
+        window.location.href = 'statistic.html';
     });
 
     const closePopup = document.getElementById('closePopup');

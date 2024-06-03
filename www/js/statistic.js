@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         column.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
             if (category) {
-                navigateToExpenseInterface(category);
+                navigateToExpenseCategory(category);
             }
         });
     });
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (currentPage === 'home.html') {
         setActiveLink(homeFooter);
-    } else if (currentPage === 'addItem.html') {
+    } else if (currentPage === 'expense.html') {
         setActiveLink(expensesFooter);
-    } else if (currentPage === 'summary.html') {
+    } else if (currentPage === 'statistic.html') {
         setActiveLink(statisticFooter);
     }
 
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     expensesFooter.addEventListener('click', function(event) {
         event.preventDefault();
-        navigateToPage('addItem.html');
+        navigateToPage('expense.html');
         setActiveLink(this);
     });
 
     statisticFooter.addEventListener('click', function(event) {
         event.preventDefault();
-        navigateToPage('summary.html');
+        navigateToPage('statistic.html');
         setActiveLink(this);
     });
 
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
         autoclose: true
     }).on('changeDate', function(e) {
         const selectedDate = e.date;
-        const month = selectedDate.getMonth() + 1;
-        const year = selectedDate.getFullYear();
+        const month = moment(selectedDate).format('MM');
+        const year = moment(selectedDate).format('YYYY');
 
         $('#monthDisplay').text('Total Expense for ' + getMonthName(month) + ' ' + year + ':');
         $('#expenseDisplay').text('RM ' + getTotalExpenseForMonth(month, year));
@@ -174,8 +174,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         userExpenses.forEach(item => {
-            const itemDate = new Date(item.date);
-            if (itemDate.getMonth() + 1 === month && itemDate.getFullYear() === year) {
+            const itemDate = moment(item.date);
+            if (itemDate.format('MM') == month && itemDate.format('YYYY') == year) {
                 const index = categoryMap[item.category] !== undefined ? categoryMap[item.category] : 5;
                 expenseData[index] += item.amount;
             }
@@ -193,15 +193,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getMonthName(month) {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        return months[month - 1];
+        return months[parseInt(month) - 1];
     }
 
     function getTotalExpenseForMonth(month, year) {
         const currentUser = localStorage.getItem('currentUser');
         const userExpenses = JSON.parse(localStorage.getItem(`expenses_${currentUser}`)) || [];
         return userExpenses.reduce((total, item) => {
-            const itemDate = new Date(item.date);
-            if (itemDate.getMonth() + 1 === month && itemDate.getFullYear() === year) {
+            const itemDate = moment(item.date);
+            if (itemDate.format('MM') == month && itemDate.format('YYYY') == year) {
                 total += item.amount;
             }
             return total;
@@ -217,8 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         userExpenses.forEach(item => {
-            const itemDate = new Date(item.date);
-            if (itemDate.getMonth() + 1 === month && itemDate.getFullYear() === year) {
+            const itemDate = moment(item.date);
+            if (itemDate.format('MM') == month && itemDate.format('YYYY') == year) {
                 const categoryKey = item.category.toLowerCase();
                 if (categoryTotals.hasOwnProperty(categoryKey)) {
                     categoryTotals[categoryKey] += item.amount;
@@ -238,11 +238,11 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#monthYearPicker').datepicker('setDate', new Date()).trigger('changeDate');
 });
 
-function navigateToExpenseInterface(category) {
+function navigateToExpenseCategory(category) {
     const selectedMonthYear = document.getElementById('monthYearPicker').value.split('/');
     const selectedMonth = selectedMonthYear[0];
     const selectedYear = selectedMonthYear[1];
 
-    const url = `expenseInterface.html?category=${encodeURIComponent(category)}&month=${selectedMonth}&year=${selectedYear}`;
+    const url = `expenseCategory.html?category=${encodeURIComponent(category)}&month=${selectedMonth}&year=${selectedYear}`;
     window.location.href = url;
 }

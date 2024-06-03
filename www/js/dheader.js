@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const backArrow = document.getElementById('backArrow');
     backArrow.addEventListener('click', function() {
-        window.location.href = 'item.html';
+        window.location.href = 'expense.html';
     });
 });
