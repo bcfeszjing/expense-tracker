@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (currentPage === 'home.html') {
         setActiveLink(homeFooter);
-    } else if (currentPage === 'item.html') {
+    } else if (currentPage === 'expense.html') {
         setActiveLink(expensesFooter);
-    } else if (currentPage === 'summary.html') {
+    } else if (currentPage === 'statistic.html') {
         setActiveLink(statisticFooter);
     }
 
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     expensesFooter.addEventListener('click', function(event) {
         event.preventDefault();
-        navigateToPage('item.html');
+        navigateToPage('expense.html');
         setActiveLink(this);
     });
 
     statisticFooter.addEventListener('click', function(event) {
         event.preventDefault();
-        navigateToPage('summary.html');
+        navigateToPage('statistic.html');
         setActiveLink(this);
     });
 

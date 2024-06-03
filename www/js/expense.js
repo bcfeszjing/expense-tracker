@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
               amount.textContent = `RM${expense.amount.toFixed(2)}`;
 
               const detailLink = document.createElement('a');
-              detailLink.href = `editItem.html?date=${encodeURIComponent(expense.date)}&name=${encodeURIComponent(expense.name)}`;
+              detailLink.href = `editExpense.html?date=${encodeURIComponent(expense.date)}&name=${encodeURIComponent(expense.name)}`;
               detailLink.classList.add('detail-link');
               detailLink.innerHTML = '<i class="bi bi-chevron-right"></i>';
 

@@ -24,7 +24,7 @@ document.getElementById('add-expense-form').addEventListener('submit', function(
       // Trigger a custom event to notify changes in localStorage
       window.dispatchEvent(new Event('storage'));
       
-      window.location.href = 'item.html';
+      window.location.href = 'expense.html';
   } else {
       alert('User not logged in.');
   }

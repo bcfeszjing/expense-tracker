@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.dispatchEvent(new Event('storage'));
 
-        window.location.href = 'item.html';
+        window.location.href = 'expense.html';
       } else {
         alert('Expense item not found.');
       }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.dispatchEvent(new Event('storage'));
 
-        window.location.href = 'item.html';
+        window.location.href = 'expense.html';
       } else {
         alert('Expense item not found.');
       }
