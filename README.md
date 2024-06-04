@@ -2,100 +2,109 @@
 
 ## Overview
 
-This project involves the development of a web-based personal expense tracker application designed to help users manage their daily expenses efficiently. The application is built using HTML, CSS, JavaScript, and jQuery, with enhancements using Bootstrap and other styling frameworks. It includes features for adding, editing, deleting, and viewing expenses, as well as secure login and signup functionality.
+<div style="text-align: justify;">
+    The Expense Tracker Application is a web-based tool designed to help users manage their daily expenses efficiently. Built with HTML, CSS, JavaScript, and jQuery, the application features a user-friendly interface enhanced by Bootstrap. It allows users to add, edit, delete, and view expenses, providing secure login and signup functionality. The application stores data in local storage using JSON and presents visual data through interactive charts. This robust tool aids users in tracking and analyzing their financial habits effectively, ensuring an intuitive and seamless experience.
+</div>
 
-## Features
+## [Authentication](index.html)
+<img src="www/Image/index.html.png" alt="authentication" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `index.html` page serves as the landing page for the Expense Tracker Application, welcoming users with the application's logo and slogan. It provides clear navigation options for users to either log in to an existing account or sign up for a new one. This page ensures an intuitive start to the user experience, guiding both new and returning users seamlessly into the application.
+</div>
 
-- **Expense Management**: Add, edit, delete, and view expenses.
-- **User Authentication**: Secure login and signup functionality.
-- **Responsive Design**: Enhanced user interface using Bootstrap.
-- **Data Persistence**: User data stored in local storage using JSON.
-- **Interactive Charts**: Visual representation of expenses using Highcharts.js.
+<div style="clear: both;"></div>
 
-## Technologies and Libraries Used
+## [Sign Up](signup.html)
+<img src="www/Image/signup.html.png" alt="signup" width="300px">
+<img src="www/Image/tanSignUp.png" alt="signupExample" width="300px">
 
-### HTML, CSS, JavaScript, and Bootstrap
-- **HTML**: Structure of the application.
-- **CSS**: Styling and visual enhancements.
-- **JavaScript**: Interactivity and dynamic behavior.
-- **Bootstrap**: Responsive and mobile-friendly interface.
+<div style="text-align: justify;">
+    The `signup.html` page is designed to allow new users to create an account by providing a unique username, password, and email address. This page ensures that all necessary details are collected in a user-friendly form, guiding users through the registration process smoothly. Upon successful registration, a confirmation message is displayed to the user, indicating the completion of the signup process.
+</div>
 
-### jQuery
-- Enhances the functionality of components like date picker and event handling.
+### Username already exist!
+<img src="www/Image/signUpNameExist.png" alt="signupExist" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    During the signup process, if the entered username already exists in the system, the application immediately notifies the user with an error message. This subpart of the signup functionality ensures that each username is unique, preventing duplication and ensuring secure, personalized user accounts.
+</div>
 
-### JSON
-- Used for storing and managing user data and expenses in local storage.
+<div style="clear: both;"></div>
 
-### External Libraries
-- **Moment.js**: Date formatting and manipulation.
-- **Highcharts.js**: Interactive charts for visualizing expenses.
+## [Login](login.html)
+<img src="www/Image/login.html.png" alt="login" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `login.html` page provides users with a secure way to access their accounts by entering their username and password. This page ensures that only authorized users can access the application by verifying the entered credentials against the stored data. A user-friendly form is presented for easy login, ensuring a smooth authentication process.
+</div>
 
-## Installation
+<div style="clear: both;"></div>
 
-To run this project locally:
+### Credentials incorrect
+<img src="www/Image/invalidLogin.png" alt="incorrectCredential" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    During the login process, if the entered credentials are incorrect, the application immediately notifies the user with an error message. This feature ensures that users are aware of any authentication issues and can take corrective action, enhancing the security and user experience of the application.
+</div>
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/expense-tracker.git
-    ```
-2. Open the `index.html` file in your web browser.
+<div style="clear: both;"></div>
 
-## User Manual
+## [Homepage](homepage.html)
+<img src="www/Image/home.html.png" alt="homepage" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `homepage.html` serves as the main dashboard for users after logging in. It displays a welcome message, a summary of the user's expenses, and recent activity. This page is designed to provide a quick overview of the user's financial status, ensuring easy navigation and access to other features of the application.
+</div>
 
-### 1. Home Page (`index.html`)
-When users access the application, they are greeted by the home page showcasing the logo and slogan. There are two buttons for `Login` and `Sign Up`.
+<div style="clear: both;"></div>
 
-<img src="">
+## [Expense](expense.html)
+<img src="www/Image/expense.html.png" alt="expense" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `expense.html` page allows users to manage their expenses by adding new entries, viewing existing ones, and managing their expense records. This page provides a detailed view of all expenses, categorized and sorted by date, making it easy for users to keep track of their spending.
+</div>
 
-### 2. Sign Up (`signUp.html`)
-New users can sign up by entering their username, password, and email.
+<div style="clear: both;"></div>
 
-<img src="">
+## [Edit or Delete Expense](editExpense.html)
+<img src="www/Image/editExpense.png" alt="edit/DeleteExpense" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `editExpense.html` page offers functionalities for editing or deleting existing expense entries. Users can update the details of their expenses or remove them entirely if needed. This feature ensures that users can maintain accurate and up-to-date financial records.
+</div>
 
-#### 2.1 Successful Sign Up
-After successful registration, users will see a confirmation pop-up.
+<div style="clear: both;"></div>
 
-<img src="">
+## [Add Expense](addExpense.html)
+<img src="www/Image/addExpense.html.png" alt="addExpense" width="300px" align="left" style="margin-right: 20px;">
+<div style="text-align: justify;">
+    The `addExpense.html` page allows users to input new expense details into the system. Users can specify the amount, date, category, and additional notes for each expense. This page is designed to be intuitive, facilitating the easy addition of new expenses to the user's financial records.
+</div>
 
-#### 2.2 Username Duplication
-If the username already exists, an error message is displayed.
+<div style="clear: both;"></div>
 
-<img src="">
+## [Statistic](statistic.html)
+<img src="www/Image/statistic.html.png" alt="statistic" width="300px">
+<img src="www/Image/statistic1.html.png" alt="statistic1" width="300px">
 
-### 3. Login (`login.html`)
-Users can log in using their username and password.
+<div style="text-align: justify;">
+    The `statistic.html` page provides a visual representation of the user's expenses through various charts and graphs. Users can filter the data by month and year, allowing for detailed analysis of their spending patterns. This page helps users to gain insights into their financial habits and make informed decisions.
+</div>
 
-<img src="">
+## Expense Category
+<div style="text-align: justify;">
+    The header title on the expenseCategory.html page dynamically changes based on the squircle that was clicked.
+</div>
+<img src="www/Image/foodCat.png" alt="food" width="200px">
+<img src="www/Image/billsCat.png" alt="bills" width="200px">
+<img src="www/Image/transCat.png" alt="transportation" width="200px">
+<img src="www/Image/GroCat.png" alt="groceries" width="200px">
+<img src="www/Image/enCat.png" alt="emtertainment" width="200px">
+<img src="www/Image/othersCat.png" alt="others" width="200px">
 
-#### 3.1 Invalid Credentials
-If the login information is incorrect, an error message is shown.
 
-<img src="">
+## Example
+<img src="www/Image/expenseRecent.png" alt="recentExpense" width="250px">
+<img src="www/Image/statisticData.png/" alt="statisticData" width="250px">
+<img src="www/Image/statisticData1.png" alt="statisticData1" width="250px">
+<img src="www/Image/categoryData.png" alt="categoryData" width="250px">
+<img src="www/Image/expenseDetail.png" alt="expenseDetail" width="250px">
 
-### 4. Home Page After Login (`home.html`)
-Displays a welcome message, total expenses for the current month, and recent expense activities.
 
-<img src="">
 
-### 5. Expense Management (`expense.html`)
-Users can add new expenses and view a list of recent expenses.
 
-<img src="">
-
-#### 5.1 Add Expense
-Users can fill in details of their new expense.
-
-<img src="">
-
-#### 5.2 Edit Expense
-Users can edit or delete existing expenses.
-
-<img src="">
-
-### 6. Statistics (`statistic.html`)
-Users can view their expenses in a visual format and filter by month and year.
-
-<img src="">
-
-## Conclusion
-This project provides a comprehensive solution for personal expense tracking, utilizing modern web technologies and libraries to deliver a responsive and user-friendly experience. Future enhancements may include backend integration and advanced security features.
